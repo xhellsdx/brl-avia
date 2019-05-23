@@ -1,0 +1,14 @@
+main {
+  width: 1024px;
+  margin: auto;
+}
+
+div.empty-content-block {
+  text-align: center;
+  color: #ccc;
+  font-size: 22px;
+  margin: auto;
+  margin-top: 100px;
+  padding-top: 90px;
+  background: url('../../icons/plain-gray.png') no-repeat 50% 0%;
+}

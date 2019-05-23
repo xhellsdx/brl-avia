@@ -1,0 +1,38 @@
+div.city-select {
+  width: 70%;
+  display: inline-block;
+  margin-top: 4%;
+  border-right: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+span.city-select-from, span.city-select-to {
+  display: inline-block;
+  width: 38%;
+}
+
+span.city-select-from {
+  margin-left: 10%;
+}
+
+span.city-select-to {
+  margin-left: 4%;
+}
+
+select.custom-select {
+  width: 100%;
+  padding-left: 20%;
+}
+
+select.custom-select.city-to {
+  background: #fff url('../../icons/plain-down.png') no-repeat left .75rem center;
+}
+
+select.custom-select.city-from {
+  background: #fff url('../../icons/plain-up.png') no-repeat left .75rem center;
+}
+
+div.city-select-text {
+  color: white;
+  font-weight: 500;
+  margin-bottom: 6px;
+}

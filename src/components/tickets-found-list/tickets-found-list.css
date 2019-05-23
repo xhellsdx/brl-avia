@@ -1,0 +1,36 @@
+div.ticket {
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  box-shadow: 0 0 5px 2px #ccc;
+  border-radius: 10px;
+  padding: 20px 10px;
+}
+
+div.ticket:hover {
+  cursor: pointer;
+}
+
+div.tickets {
+  width: 60%;
+  display: inline-block;
+  border-right: 1px solid #e6e3e3;
+  margin-top: 20px;
+  padding-right: 10px;
+}
+
+div.not-found-tickets {
+  text-align: center;
+  color: #ccc;
+  font-size: 22px;
+  margin: auto;
+  width: 60%;
+  margin-top: 100px;
+  padding-top: 90px;
+  background: url('../../icons/plain-gray.png') no-repeat 50% 0%;
+  display: inline-block;
+}
+
+div.ticket.in-basket {
+  box-shadow: 0 0 2px 3px #5dc1ff;
+}

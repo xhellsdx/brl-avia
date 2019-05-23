@@ -1,0 +1,46 @@
+div.baggage-weight {
+  width: 30%;
+  display: inline-block;
+  margin-top: 4%;
+  padding-left: 6%;
+}
+
+div.baggage-weight-text {
+  color: white;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+span.baggage-weight-kilo {
+  color: white;
+  font-weight: 500;
+  font-size: 26px;
+  width: 18%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+i.fa {
+  color: white;
+  background-color: #5dc1ff;
+  border: none;
+  font-size: 40px;
+  position: relative;
+}
+
+i.fa:hover {
+  cursor: pointer;
+  color: #5d71ff;
+}
+
+div.baggage-weight button span {
+  top: -8%;
+  left: 19%;
+  position: absolute;
+}

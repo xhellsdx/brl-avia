@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8b49df21.chunk.css",
+    "main.js": "/static/js/main.48b1a4b2.chunk.js",
+    "main.js.map": "/static/js/main.48b1a4b2.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.8318b998.chunk.js": "/static/js/2.8318b998.chunk.js",
+    "static/js/2.8318b998.chunk.js.map": "/static/js/2.8318b998.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.72468136a189d127b824d7c11aa7ec6a.js": "/precache-manifest.72468136a189d127b824d7c11aa7ec6a.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.8b49df21.chunk.css.map": "/static/css/main.8b49df21.chunk.css.map",
+    "static/media/ticket.css": "/static/media/line.d5486562.png",
+    "static/media/city-select.css": "/static/media/plain-up.4965c4dd.png",
+    "static/media/basket.css": "/static/media/plain-small-horizontal.05dd0092.png"
+  }
+}
