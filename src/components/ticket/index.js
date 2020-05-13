@@ -1,3 +1,1 @@
-import Ticket from './ticket'
-
-export default Ticket;
+export { default } from './Ticket';

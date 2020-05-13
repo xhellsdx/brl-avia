@@ -1,53 +1,85 @@
 import React from 'react';
-import './basket.css';
-import { buyButtonClick, ticketInBasketClick } from '../../actions/';
 import { connect } from 'react-redux';
-import { beatyPrice } from '../../services/functions';
+import PropTypes from 'prop-types';
 
-const Basket = ({ticketsInBasket, ticketsInBasketCount, buyButtonClick, ticketInBasketClick}) => {
-  if (ticketsInBasketCount === 0) {
+import * as actions from '../../actions';
+import { beatyPrice } from '../../utils/helpers';
+
+import s from './Basket.module.scss';
+
+@connect(
+  state => ({
+    ticketsInBasket: state.ticketsInBasket,
+    ticketsInBasketCount: state.ticketsInBasketCount,
+  }),
+  {
+    buyButtonClick: actions.buyButtonClick,
+    ticketInBasketClick: actions.ticketInBasketClick,
+  },
+)
+class Basket extends React.PureComponent {
+  static propTypes = {
+    ticketsInBasket: PropTypes.shape({}),
+    ticketsInBasketCount: PropTypes.number,
+    buyButtonClick: PropTypes.func,
+    ticketInBasketClick: PropTypes.func,
+  };
+
+  static defaultProps = {
+    ticketsInBasket: {},
+    ticketsInBasketCount: 0,
+    buyButtonClick: () => {},
+    ticketInBasketClick: () => {},
+  };
+
+  ticketInBasketHandler = id => () => {
+    const { ticketInBasketClick } = this.props;
+    ticketInBasketClick(id);
+  }
+
+  render() {
+    const {
+      ticketsInBasket, ticketsInBasketCount, buyButtonClick,
+    } = this.props;
+
+    if (ticketsInBasketCount === 0) {
+      return (
+        <div className={s.emptyBasket}>
+          Корзина пуста
+        </div>
+      );
+    }
+
+    const tickets = [];
+    Object.keys(ticketsInBasket).forEach((key) => {
+      const {
+        id, from, to, price,
+      } = ticketsInBasket[key];
+      tickets.push(
+        <div className={s.ticketInBasket} key={id} onClick={this.ticketInBasketHandler(id)}>
+          <div className={s.cities}>
+            <span className={s.citiesFrom}>{from}</span> <span>{to}</span> <br />
+          </div>
+          <div className={s.summ}>
+            <span className={s.ticketImportantInfo}>2 </span>
+            билета на сумму
+            <span className={s.ticketImportantInfo}> {beatyPrice(price * 2)}</span>
+          </div>
+        </div>,
+      );
+    });
+
     return (
-      <div className='empty-basket'>
-        Корзина пуста
+      <div className={s.basket}>
+        <div>
+          {tickets}
+        </div>
+        <button type="button" className={s.basketBuyButton} onClick={buyButtonClick}>
+          Купить
+        </button>
       </div>
     );
   }
-  const tickets = [];
-  for(let i in ticketsInBasket){
-    const {id, from, to, price} = ticketsInBasket[i];
-    tickets.push(
-      <div className='ticket-in-basket' key={id} data-id={id} onClick={ticketInBasketClick}>
-        <div className='cities'>
-           <span className='cities-from'>{from}</span> <span className='cities-to'>{to}</span> <br/>
-         </div>
-         <div className='summ'>
-         	<span className='ticket-important-info'>2</span> билета на сумму <span className='ticket-important-info'>{beatyPrice(price * 2)}</span>
-         </div>
-       </div>
-    );
-  }
-  return(
-    <div className='basket'>
-      <div className='tickets-in-basket'>
-        {tickets}
-      </div>
-      <button type='button' className='btn btn-primary basket-buy-button'onClick={buyButtonClick}>Купить</button>
-    </div>
-  );
 }
 
-const mapStateToProps = (state) => {
-  return {
-    ticketsInBasket: state.ticketsInBasket, 
-    ticketsInBasketCount: state.ticketsInBasketCount, 
-  }
-}
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    buyButtonClick: () => dispatch(buyButtonClick()),
-    ticketInBasketClick: (e) => dispatch(ticketInBasketClick(e)),
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Basket);
+export default Basket;

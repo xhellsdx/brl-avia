@@ -1,0 +1,52 @@
+.citySelect {
+  width: 80%;
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.6);
+
+
+  .citySelectFrom, .citySelectTo {
+    display: inline-block;
+    width: 38%;
+  }
+
+  .citySelectFrom {
+    margin-right: 2%;
+  }
+  
+  .citySelectTo {
+    margin-left: 2%;
+  }
+
+  .customSelect {
+    width: 100%;
+    height: calc(2.875rem + 2px);
+    font-size: 125%;
+    padding: .375rem 1.75rem .375rem 3.25rem;
+    line-height: 1.5;
+    color: #495057;
+    vertical-align: middle;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    margin-bottom: 1rem;
+    appearance: none;
+
+    &:first-child {
+      background: #fff url('./icons/plain-down.png') no-repeat left .75rem center;
+    }
+
+    &:last-child {
+      background: #fff url('./icons/plain-up.png') no-repeat left .75rem center;
+    }
+  }
+
+  .text {
+    color: white;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+}

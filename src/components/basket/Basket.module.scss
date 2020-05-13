@@ -1,0 +1,66 @@
+.emptyBasket {
+  float: right;
+  width: 37%;
+  text-align: center;
+  color: #ccc;
+  font-size: 22px;
+  margin: auto;
+  margin-top: 100px;
+  padding-top: 90px;
+  background: url('../ContentBlock/icons/plain-gray.png') no-repeat 50% 0%;
+}
+
+.basket {
+  float: right;
+  padding-top: 40px;
+  width: 37%;
+
+  .ticketInBasket {
+    margin-top: 20px;
+    text-align: center;
+    border-bottom: 1px solid #e6e3e3;
+    padding-bottom: 15px;
+    &:hover {
+      cursor: pointer;
+    }
+
+    .cities {
+      color: #706e6e;
+      margin-bottom: 15px;
+      font-size: 18px;
+
+      .citiesFrom {
+        background: url('../Ticket/icons/plain-small-horizontal.png') no-repeat 90% 50%;
+        padding-right: 60px;
+      }
+    }
+
+    .summ {
+      color: #ccc;
+
+      .ticketImportantInfo {
+        color: #5dc1ff;
+        font-weight: 500;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .basketBuyButton {
+    background-color: #5dc1ff;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    width: 80%;
+    border: none;
+    margin-left: 10%;
+    margin-top: 40px;
+    padding: 15px 0px;
+    &:hover {
+      cursor: pointer;
+      color: #fff;
+      background-color: #0069d9;
+      border-color: #0062cc;
+    }
+  }
+}

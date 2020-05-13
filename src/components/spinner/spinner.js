@@ -1,13 +1,11 @@
 import React from 'react';
-import './spinner.css';
+import s from './Spinner.module.scss';
 
-const Spinner = () => {
-  return (
-    <div className='spinner'>
-      <div id="preloader"></div>
-      <div id="loader"></div>
-    </div>
-  );
-}
+const Spinner = () => (
+  <div className={s.spinner}>
+    <div className={s.preloader} />
+    <div className={s.loader} />
+  </div>
+);
 
 export default Spinner;
