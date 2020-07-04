@@ -1,4 +1,4 @@
-import TicketsAPI from '../utils/tickets-api';
+import TicketsAPI from '../../utils/tickets-api';
 
 const ticketsAPI = new TicketsAPI();
 

@@ -103,7 +103,7 @@ export default class TicketsAPI {
     6: 'Оттава',
   };
 
-  delay = ms => new Promise((resolve, reject) => {
+  delay = ms => new Promise((resolve) => {
       setTimeout(resolve, ms);
     })
 
